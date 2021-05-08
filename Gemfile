@@ -68,4 +68,4 @@ gem 'activeadmin'
 gem 'devise'
 
 # cross origin
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
