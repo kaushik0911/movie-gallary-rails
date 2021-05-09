@@ -66,3 +66,6 @@ gem 'activeadmin'
 
 # App authenications
 gem 'devise'
+
+# For cross origin
+gem 'rack-cors'
