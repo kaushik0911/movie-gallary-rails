@@ -1,5 +1,5 @@
 module Api::MoviesHelper
-  def thumb(object)
-    "#{request.base_url}#{url_for(object.poster.variant(:thumb))}"
+  def original_image(object)
+    "#{rails_blob_url(object)}"
   end
 end

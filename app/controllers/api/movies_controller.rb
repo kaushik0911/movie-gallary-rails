@@ -6,7 +6,7 @@ class Api::MoviesController < ApplicationController
         id: movie.id,
         title: movie.title,
         synopsis: movie.synopsis,
-        thumb: helpers.thumb(movie)
+        poster: helpers.original_image(movie.poster)
       })
     end
 
