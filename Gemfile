@@ -73,3 +73,6 @@ gem 'rack-cors'
 # For active storage
 gem "mini_magick"
 gem "image_processing"
+
+# Fake data
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
