@@ -1,12 +1,21 @@
 class Api::UsersController < ApplicationController
   def create
-    user = User.new(user_params)
-    user.save
+    begin
+      user = User.new(user_params)
+      user.save
 
-    render json: {
-      name: user.name,
-      email: user.email
-    }, status: :created
+      render json: {
+        name: user.name,
+        email: user.email
+      },
+      status: :created
+
+    rescue ActiveRecord::ActiveRecordError => are
+
+    rescue Exception
+      # handle everything else
+      raise
+    end
   end
 
   def show
